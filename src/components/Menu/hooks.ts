@@ -21,7 +21,7 @@ import { fetchProfile } from './profile'
 import { fetchTeam, fetchTeams } from './teams'
 import { fetchAchievements } from './achievements'
 import { fetchPrices } from './prices'
-import useGetPriceData from '../components/Menu/getPrice'
+import useGetPriceData from 'src/components/Menu/getPrice'
 
 const ZERO = new BigNumber(0)
 
@@ -113,14 +113,14 @@ export const usePriceCakeBusd = (): BigNumber => {
 
   let priceData = useGetPriceData()
 
-  // @ts-ignore  
+  // @ts-ignore
   priceData = new BigNumber(priceData)
 
   const farm = useFarmFromPid(pid)
 
   //  @ts-ignore
   return farm.tokenPriceVsQuote ? priceData.times(farm.tokenPriceVsQuote) : ZERO
-  
+
 }
 
 export const usePriceEthBusd = (): BigNumber => {
