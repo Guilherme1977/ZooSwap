@@ -5,8 +5,6 @@ import useTokenBalance from 'hooks/useTokenBalance'
 import useI18n from 'hooks/useI18n'
 import { getCakeAddress } from 'utils/addressHelpers'
 import { getBalanceNumber } from 'utils/formatBalance'
-import { usePriceCakeBusd } from 'state/hooks'
-import { BigNumber } from 'bignumber.js'
 import CardValue from './CardValue'
 
 const CakeWalletBalance = () => {

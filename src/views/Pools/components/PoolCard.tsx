@@ -11,7 +11,6 @@ import useI18n from 'hooks/useI18n'
 import { useSousStake } from 'hooks/useStake'
 import { useSousUnstake } from 'hooks/useUnstake'
 import { getBalanceNumber } from 'utils/formatBalance'
-import { getPoolApy } from 'utils/apy'
 import { useSousHarvest } from 'hooks/useHarvest'
 import Balance from 'components/Balance'
 import { QuoteToken, PoolCategory } from 'config/constants/types'
@@ -60,8 +59,6 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
   const { onReward } = useSousHarvest(sousId, isBnbPool)
 
   // APY
-  const rewardTokenPrice = useGetApiPrice(tokenName)
-  const stakingTokenPrice = useGetApiPrice(stakingTokenName)
 
 
   const [requestedApproval, setRequestedApproval] = useState(false)

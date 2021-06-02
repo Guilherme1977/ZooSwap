@@ -5,7 +5,7 @@ import { allLanguages } from 'config/localisation/languageCodes'
 import { LanguageContext } from 'contexts/Localisation/languageContext'
 import useTheme from 'hooks/useTheme'
 import useAuth from 'hooks/useAuth'
-import { usePriceCakeBusd, useProfile } from 'state/hooks'
+import usePriceCakeBusd from 'state/hooks'
 import config from './config'
 
 const Menu = (props) => {
