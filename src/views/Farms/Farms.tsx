@@ -90,11 +90,7 @@ const ViewControls = styled.div`
   }
 `
 
-const StyledImage = styled(Image)`
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 58px;
-`
+
 
 const Header = styled.div`
   padding: 32px 0px;

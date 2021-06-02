@@ -62,12 +62,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
   // APY
   const rewardTokenPrice = useGetApiPrice(tokenName)
   const stakingTokenPrice = useGetApiPrice(stakingTokenName)
-  const apy = getPoolApy(
-    stakingTokenPrice,
-    rewardTokenPrice,
-    getBalanceNumber(pool.totalStaked, stakingTokenDecimals),
-    parseFloat(pool.tokenPerBlock),
-  )
+
 
   const [requestedApproval, setRequestedApproval] = useState(false)
   const [pendingTx, setPendingTx] = useState(false)

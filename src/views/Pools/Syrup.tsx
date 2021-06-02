@@ -10,9 +10,7 @@ import useI18n from 'hooks/useI18n'
 import { usePools, useBlock } from 'state/hooks'
 import FlexLayout from 'components/layout/Flex'
 import Page from 'components/layout/Page'
-import Coming from './components/Coming'
 import PoolCard from './components/PoolCard'
-import PoolTabButtons from './components/PoolTabButtons'
 import Divider from './components/Divider'
 
 const Farm: React.FC = () => {
@@ -21,7 +19,7 @@ const Farm: React.FC = () => {
   const { account } = useWeb3React()
   const pools = usePools(account)
   const { blockNumber } = useBlock()
-  const [stackedOnly, setStackedOnly] = useState(false)
+  const stackedOnly = useState(false)
 
   const [finishedPools, openPools] = useMemo(
     () => partition(pools, (pool) => pool.isFinished || blockNumber > pool.endBlock),
