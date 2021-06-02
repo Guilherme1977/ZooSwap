@@ -21,7 +21,7 @@ import { fetchProfile } from './profile'
 import { fetchTeam, fetchTeams } from './teams'
 import { fetchAchievements } from './achievements'
 import { fetchPrices } from './prices'
-import useGetPriceData from 'src/components/Menu/getPrice'
+import useGetPriceData from '.../components/Menu/getPrice'
 
 const ZERO = new BigNumber(0)
 
